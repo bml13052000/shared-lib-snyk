@@ -1,18 +1,16 @@
 def call(Map pipelineParams){
 
-    pipeline{
-        agent{
-            label 'snyk-agent'
-        }
-
-        stages{
-            stage("Say hello"){
-                steps{
-                    sh "echo hello ${pipelineParams.name}"
-                }
-                
+    stages{
+        stage("Say hello"){
+            agent{
+                label 'snyk-agent'
             }
+            steps{
+                sh "echo hello ${pipelineParams.name}"
+            }
+            
         }
     }
+    
 
 }
