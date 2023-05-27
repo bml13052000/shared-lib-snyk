@@ -1,6 +1,6 @@
 def call(Map pipelineParams){
  
-    paralell{
+    parallel{
         stage("Say hello"){
             agent{
                 label 'snyk-agent'
