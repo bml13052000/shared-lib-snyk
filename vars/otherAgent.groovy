@@ -7,7 +7,10 @@ def call(Map pipelineParams){
 
         stages{
             stage("Say hello"){
-                sh "echo hello ${pipelineParams.name}"
+                steps{
+                    sh "echo hello ${pipelineParams.name}"
+                }
+                
             }
         }
     }
