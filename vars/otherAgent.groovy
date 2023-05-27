@@ -1,4 +1,4 @@
-def call(Map pipelineParams){
+def call(def name){
  
     parallel{
         stage("Say hello"){
@@ -6,7 +6,7 @@ def call(Map pipelineParams){
                 label 'snyk-agent'
             }
             steps{
-                sh "echo hello ${pipelineParams.name}"
+                sh "echo hello ${name}"
             }
             
         }
