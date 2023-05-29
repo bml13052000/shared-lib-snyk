@@ -6,8 +6,9 @@ def call(def name){
             agent{
                 label 'snyk-agent'
             }
-         
-                sh "echo hello ${name}"
+            checkout scm
+            sh "hostname"
+            sh "echo hello ${name}"
             
             
             }
