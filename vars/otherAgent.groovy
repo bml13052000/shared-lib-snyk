@@ -1,6 +1,6 @@
 def call(def name){
  
-    parallel{
+    parallel(
         hello: {
             stage("Say hello"){
             agent{
@@ -12,6 +12,6 @@ def call(def name){
             
             }
         }
-    }
+    )
     
 }
