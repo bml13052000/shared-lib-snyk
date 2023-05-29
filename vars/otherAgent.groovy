@@ -6,9 +6,9 @@ def call(def name){
             agent{
                 label 'snyk-agent'
             }
-            steps{
+         
                 sh "echo hello ${name}"
-            }
+            
             
             }
         }
