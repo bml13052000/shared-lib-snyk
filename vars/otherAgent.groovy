@@ -1,7 +1,8 @@
 def call(def name){
  
     parallel{
-        stage("Say hello"){
+        hello: {
+            stage("Say hello"){
             agent{
                 label 'snyk-agent'
             }
@@ -9,6 +10,7 @@ def call(def name){
                 sh "echo hello ${name}"
             }
             
+            }
         }
     }
     
