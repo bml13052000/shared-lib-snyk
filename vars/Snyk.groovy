@@ -1,4 +1,4 @@
-def call(def name){
+def call(def token){
  
     parallel(
         hello: {
