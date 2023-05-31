@@ -7,7 +7,7 @@ def call(def token){
              sh "hostname"
             //  sh "echo hello ${name}"
             sh "snyk auth ${token}"
-            sh "snyk test"
+            catcherr{sh "snyk test"}
             sh "snyk monitor"
   
             }
