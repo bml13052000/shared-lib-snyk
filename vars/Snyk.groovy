@@ -7,8 +7,8 @@ def call(def token){
              sh "hostname"
             //  sh "echo hello ${name}"
             sh "snyk auth ${token}"
-            sh "snyk test --all-projects"
-            sh "snyk monitor --all-projects"
+            sh "snyk test"
+            sh "snyk monitor"
   
             }
         }
