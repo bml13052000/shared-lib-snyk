@@ -8,6 +8,7 @@ def call(def token){
             //  sh "echo hello ${name}"
             sh "snyk auth ${token}"
             sh "snyk code test"
+            }
   
         }
     )
